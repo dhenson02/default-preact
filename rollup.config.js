@@ -7,7 +7,6 @@ import { minify } from 'uglify-js';
 export default {
 
     entry: 'src/js/app.js',
-    // format: 'iife',
     exports: 'none',
     sourceMap: 'dist/js/app.js.map',
     treeshake: true,
@@ -16,8 +15,8 @@ export default {
             include: 'node_modules/**'
         }),
         babel({
-            /*runtimeHelpers: true,
-            plugins: [ 'external-helpers' ]*/
+            runtimeHelpers: true,
+            plugins: [ 'external-helpers' ]
         }),
         nodeResolve({
             jsnext: true,

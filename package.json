@@ -6,10 +6,10 @@
   "scripts": {
     "dist": "npm run js && npm run css && npm run css-dist && npm run inline",
     "js": "rollup -c",
-    "js-dist": "uglifyjs src/js/_app.js --compress --screw-ie8 --mangle --comments --source-map dist/js/app.min.js.map --output dist/js/app.min.js",
+    "js-dist": "uglifyjs src/js/_app.js --compress unsafe,keep_fargs,drop_console,collapse_vars,if_return,join_vars,cascade,booleans,loops,unused,comparisons,conditionals,drop_debugger,dead_code,properties,sequences --screw-ie8 --mangle --comments --source-map dist/js/app.min.js.map --output dist/js/app.min.js",
     "css": "postcss --use postcss-import --use autoprefixer src/css/styles.css | cssnano > src/css/_styles.css",
-    "css-dist": "purifycss src/css/_styles.css src/index.html dist/js/app.min.js --out dist/css/styles.css",
-    "inline": "critical src/index.html --extract --base dist/ -H dist/index.html"
+    "css-dist": "purifycss src/css/_styles.css src/index.html dist/js/app.min.js --min --out dist/css/styles.css",
+    "inline": "critical src/index.html --extract --minify --base dist/ -H dist/index.html"
   },
   "keywords": [],
   "author": "",
