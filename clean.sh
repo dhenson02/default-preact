@@ -1,6 +1,7 @@
 #!/bin/sh
 
 if [ -d ".tmp/" ];then
+    rm -f ".tmp/*.html"
     if [ -d ".tmp/css" ];then
         rm -rf ".tmp/css/*"
     else
