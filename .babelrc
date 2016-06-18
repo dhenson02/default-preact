@@ -3,6 +3,7 @@
         "es2015"
     ],
     "plugins": [
-        "lodash"
+        "lodash",
+        [ "transform-react-jsx", { 'pragma': 'h' } ]
     ]
 }

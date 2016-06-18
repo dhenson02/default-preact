@@ -29,6 +29,7 @@
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.10.1",
     "babel-plugin-lodash": "^3.2.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
@@ -46,10 +47,14 @@
     "watchy": "^0.6.6"
   },
   "dependencies": {
+    "director": "^1.2.8",
+    "event": "github:dhenson02/event",
     "fastclick": "^1.0.6",
     "fastdom": "^1.0.2",
     "immutable": "^3.8.1",
     "lodash": "^4.13.1",
+    "preact": "^4.8.0",
+    "preact-router": "^2.0.0",
     "request": "^2.72.0",
     "reqwest": "^2.0.5",
     "socket.io": "^1.4.6"
