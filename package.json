@@ -4,7 +4,7 @@
   "description": "Boilerplate based on default-vanilla but with preact ",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf .tmp/* dist/{index.html,css/*,js/*}",
+    "clean": "sh clean.sh && dist/{index.html,css/*,js/*}",
     "dist": "npm run clean && npm run js-dist && npm run css-dist && npm run inline-dist",
     "watch": "watchy -w src -- npm run build",
     "build": "npm run clean && npm run js-dev && npm run css && cp .tmp/styles.css dist/css/styles.css && npm run inline",
