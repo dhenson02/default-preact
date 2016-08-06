@@ -1,16 +1,12 @@
 #!/bin/sh
 
-if [ -d ".tmp/" ];then
-    if [ -d ".tmp/css" ];then
-        rm -rf .tmp/css/*
+for DIR in "$@"
+do
+    if [ -d $DIR ];then
+        [ -f $DIR/index.html ] && rm $DIR/index.html
+        [ -d $DIR/css ] && rm -rf $DIR/css/* || mkdir $DIR/css
+        [ -d $DIR/js ] && rm -rf $DIR/js/* || mkdir $DIR/js
     else
-        mkdir .tmp/css
+        mkdir -p $DIR/css $DIR/js
     fi
-    if [ -d ".tmp/js" ];then
-        rm -rf .tmp/js/*
-    else
-        mkdir .tmp/js
-    fi
-else
-    mkdir -p .tmp/css .tmp/js
-fi
+done
